@@ -23,7 +23,7 @@ public class InventoryService {
                 .map(inventory ->
                     InventoryResponse.builder()
                             .skuCode(inventory.getSkuCode())
-                            .isInStock(inventory.getQuantity() > 10)
+                            .isInStock(inventory.getQuantity() > 0)
                             .build()
                 ).toList();
      }
